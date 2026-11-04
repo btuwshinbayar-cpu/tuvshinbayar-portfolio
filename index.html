@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Б.Түвшинбаяр — Аялал жуулчлалын багш, дижитал инноваци ба AI сонирхогч.">
+<title>Б.Түвшинбаяр | Personal Portfolio</title>
+<style>
+:root{--ink:#17212b;--muted:#64717d;--line:#e7ebef;--blue:#246bce;--soft:#f5f8fb;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.04em;font-size:19px}.navlinks{display:flex;gap:24px;font-size:13px;color:var(--muted)}.navlinks a:hover{color:var(--blue)}
+.lang{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 13px;font-weight:700;cursor:pointer;color:var(--ink)}
+.hero{padding:100px 0 84px;background:linear-gradient(180deg,#f8fbff 0%,#fff 100%)}.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:70px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:800}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.06em;margin:18px 0}.lead{font-size:19px;color:#53616e;max-width:650px}.sublead{color:var(--muted);max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 18px;border-radius:9px;background:var(--blue);color:#fff;font-weight:700;font-size:14px;display:inline-block}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.profile{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 18px 50px rgba(24,55,90,.07)}.avatar{width:100%;aspect-ratio:1/1;border-radius:18px;background:linear-gradient(135deg,#e7f1ff,#f5f8fb);display:grid;place-items:center;color:#246bce;font-size:72px;font-weight:800;letter-spacing:-.08em}.profile h3{margin:20px 0 2px;font-size:20px}.profile p{margin:0;color:var(--muted);font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:11px;background:var(--soft);padding:6px 10px;border-radius:999px;color:#53616e}
+section{padding:78px 0;border-top:1px solid var(--line)}.section-head{max-width:650px;margin-bottom:34px}.kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:11px}.section-head h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.045em;line-height:1.15;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.about-grid p{color:#53616e;margin-top:0}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:20px;border:1px solid var(--line);border-radius:14px}.stat strong{display:block;font-size:28px;letter-spacing:-.04em}.stat span{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:white;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(20,40,60,.07)}.card .num{color:var(--blue);font-weight:800;font-size:12px}.card h3{font-size:18px;line-height:1.3;margin:12px 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}.pill{display:inline-block;margin-top:15px;color:var(--blue);font-size:11px;font-weight:800}
+.timeline{border-left:2px solid var(--line);padding-left:24px;display:grid;gap:25px}.event{position:relative}.event:before{content:"";position:absolute;left:-31px;top:8px;width:10px;height:10px;background:var(--blue);border-radius:50%}.event h3{margin:0 0 4px;font-size:17px}.event p{margin:0;color:var(--muted);font-size:14px}
+.contact{background:var(--soft)}.contact-row{display:flex;justify-content:space-between;align-items:center;gap:30px}.contact-row h2{font-size:36px;letter-spacing:-.05em;margin:8px 0}.contact-row p{color:var(--muted);margin:0}
+footer{padding:26px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+[ data-en ]{display:none}body.en [data-mn]{display:none}body.en [data-en]{display:initial}body.en div[data-en],body.en p[data-en],body.en h1[data-en],body.en h2[data-en],body.en h3[data-en],body.en span[data-en],body.en a[data-en]{display:block}
+@media(max-width:800px){.navlinks{display:none}.hero{padding:65px 0}.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}.profile{max-width:380px}.cards{grid-template-columns:1fr 1fr}.contact-row{display:block}.contact-row .btn{margin-top:20px}}
+@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.cards{grid-template-columns:1fr}.hero h1{font-size:46px}.section{padding:58px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#">Б.ТҮВШИНБАЯР<span style="color:#246bce">.</span></a>
+<nav class="navlinks"><a href="#about"><span data-mn>Миний тухай</span><span data-en>About</span></a><a href="#work"><span data-mn>Төслүүд</span><span data-en>Projects</span></a><a href="#research"><span data-mn>Судалгаа</span><span data-en>Research</span></a><a href="#contact"><span data-mn>Холбоо барих</span><span data-en>Contact</span></a></nav>
+<button class="lang" id="langBtn" type="button">EN</button>
+</div></header>
+<main>
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<div class="eyebrow"><span data-mn>Хувийн танилцуулга · 2026</span><span data-en>Personal portfolio · 2026</span></div>
+<h1 data-mn>Боловсрол.<br>Инноваци.<br><span style="color:#246bce">Ирээдүй.</span></h1>
+<h1 data-en>Education.<br>Innovation.<br><span style="color:#246bce">The Future.</span></h1>
+<p class="lead" data-mn>Б.Түвшинбаяр — аялал жуулчлалын багш, дижитал шилжилт болон хиймэл оюун ухаанд суурилсан инновацийг сонирхон ажиллагч.</p>
+<p class="lead" data-en>B. Tuvshinbayar — tourism educator exploring digital transformation and AI-driven innovation.</p>
+<p class="sublead" data-mn>Мэдлэг, технологи, бүтээлч сэтгэлгээг холбож, аялал жуулчлалын салбарын шинэ үеийн шийдлийг хөгжүүлэхийг зорьдог.</p>
+<p class="sublead" data-en>Connecting knowledge, technology and creative thinking to shape new solutions for the tourism industry.</p>
+<div class="actions"><a class="btn" href="#about"><span data-mn>Танилцах</span><span data-en>Explore profile</span></a><a class="btn secondary" href="#contact"><span data-mn>Холбоо барих</span><span data-en>Get in touch</span></a></div>
+</div>
+<aside class="profile"><div class="avatar">Б.Т</div><h3>Б.Түвшинбаяр</h3><p data-mn>Аялал жуулчлалын менежер · Магистр</p><p data-en>Tourism Manager · Master's degree</p><div class="tags"><span class="tag">Tourism Education</span><span class="tag">Digital Innovation</span><span class="tag">AI & Technology</span></div></aside>
+</div></div>
+<section id="about"><div class="wrap"><div class="section-head"><div class="kicker" data-mn>Миний тухай</div><div class="kicker" data-en>About me</div><h2 data-mn>Мэргэжил, мэдлэг, шинэ санааны огтлолцол.</h2><h2 data-en>Where expertise meets new ideas.</h2></div>
+<div class="about-grid"><div><p data-mn>Би Олон Улсын Улаанбаатарын Их Сургуулийн Бизнес, эдийн засгийн сургуулийн Аялал жуулчлалын чиглэлээр багшилдаг. Аялал жуулчлалын менежментийн бакалаврын болон магистрын боловсролтой бөгөөд боловсролын салбарт 5 жил ажиллаж байна.</p><p data-en>I teach in the tourism field at the School of Business and Economics of the International University of Ulaanbaatar. I hold a bachelor's degree in Tourism Management and a master's degree, with five years of experience in education.</p><p data-mn>Миний ажил, судалгааны сонирхол аялал жуулчлалын дижитал шилжилт, цахим аялал жуулчлал, хиймэл оюун ухаан, жуулчдын технологийн хэрэглээ болон дижитал маркетингийн чиглэлд төвлөрдөг.</p><p data-en>My professional and research interests include tourism digital transformation, e-tourism, artificial intelligence, tourist technology adoption and digital marketing.</p></div>
+<div class="stats"><div class="stat"><strong>5 жил</strong><span data-mn>Боловсролын салбарын туршлага</span><span data-en>Experience in education</span></div><div class="stat"><strong>2023</strong><span data-mn>Магистрын зэрэг</span><span data-en>Master's degree</span></div><div class="stat"><strong>2016</strong><span data-mn>Бакалаврын зэрэг</span><span data-en>Bachelor's degree</span></div><div class="stat"><strong>AI + Tourism</strong><span data-mn>Сонирхож буй чиглэл</span><span data-en>Focus areas</span></div></div></div></div></section>
+<section id="work"><div class="wrap"><div class="section-head"><div class="kicker" data-mn>Төсөл ба бүтээл</div><div class="kicker" data-en>Projects & work</div><h2 data-mn>Санаанаас бодит хэрэглээ рүү.</h2><h2 data-en>Turning ideas into practical solutions.</h2><p data-mn>Сургалт, технологи, аялал жуулчлалын огтлолцолд хэрэгжүүлж буй ажлууд.</p><p data-en>Selected work at the intersection of education, technology and tourism.</p></div>
+<div class="cards">
+<article class="card"><div class="num">01 / DIGITAL TOURISM</div><h3>AI Travel Planner Mongolia</h3><p data-mn>Монгол орны аяллын төлөвлөлтөд хиймэл оюун ухааныг ашиглах туршилтын шийдэл.</p><p data-en>An experimental AI-powered travel planning concept for Mongolia.</p><a class="pill" href="https://github.com/" target="_blank" rel="noreferrer">GITHUB ↗</a></article>
+<article class="card"><div class="num">02 / SUSTAINABILITY</div><h3>Eco Travel Mongolia</h3><p data-mn>Монголын аяллын тээврийн хэрэгслийн нүүрстөрөгчийн ялгарлыг тооцоолох веб хэрэгсэл.</p><p data-en>A web tool for estimating transport-related carbon emissions for trips in Mongolia.</p><a class="pill" href="https://btuwshinbayar-cpu.github.io/IUU-carbon-calculator/" target="_blank" rel="noreferrer">VIEW PROJECT ↗</a></article>
+<article class="card"><div class="num">03 / CAPACITY BUILDING</div><h3>SCORE Hoco Mongolia</h3><p data-mn>Зочлох үйлчилгээний байгууллагуудад сургалт, зөвлөн туслах үйл ажиллагаа хэрэгжүүлсэн.</p><p data-en>Training and coaching activities supporting service quality in hospitality businesses.</p><span class="pill">TRAINING · COACHING</span></article>
+<article class="card"><div class="num">04 / EDUCATION</div><h3>Tourism Innovation Challenge</h3><p data-mn>Оюутнуудын инновацийн санааг бодит асуудалтай холбох багийн сорилт.</p><p data-en>A team challenge connecting student innovation with real-world tourism problems.</p><span class="pill">STUDENT PROJECT</span></article>
+<article class="card"><div class="num">05 / DIGITAL LEARNING</div><h3>E-Tourism & AI in Tourism</h3><p data-mn>Цахим аялал жуулчлал, дижитал маркетинг, AI сэдвээр сургалтын материал боловсруулдаг.</p><p data-en>Developing learning materials on e-tourism, digital marketing and AI in tourism.</p><span class="pill">TEACHING MATERIALS</span></article>
+<article class="card"><div class="num">06 / EVENTS</div><h3>Grand Tour 2026</h3><p data-mn>Аялал жуулчлалын дижитал шилжилт, AI-ийн хэрэглээг танилцуулах үзэсгэлэнгийн ажил.</p><p data-en>Exhibition work showcasing digital transformation and AI applications in tourism.</p><span class="pill">EXHIBITION · 2026</span></article>
+</div></div></section>
+<section id="research"><div class="wrap"><div class="section-head"><div class="kicker" data-mn>Судалгаа ба мэргэжлийн чиглэл</div><div class="kicker" data-en>Research interests</div><h2 data-mn>Судлах, турших, хуваалцах.</h2><h2 data-en>Research. Experiment. Share.</h2></div>
+<div class="cards">
+<div class="card"><div class="num">01</div><h3>E-Tourism</h3><p data-mn>Цахим аялал жуулчлалын экосистем, платформ, үйлчилгээний шинэчлэл.</p><p data-en>Digital tourism ecosystems, platforms and service innovation.</p></div>
+<div class="card"><div class="num">02</div><h3>AI in Tourism</h3><p data-mn>Аяллын төлөвлөлт, үйлчилгээ, хэрэглэгчийн туршлага дахь AI-ийн хэрэглээ.</p><p data-en>AI applications in trip planning, services and visitor experience.</p></div>
+<div class="card"><div class="num">03</div><h3>Technology Adoption</h3><p data-mn>Жуулчдын технологи хүлээн авах байдал, TAM болон цахим шийдвэр гаргалт.</p><p data-en>Tourist technology adoption, TAM and digital decision-making.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker" data-mn>Боловсрол ба туршлага</div><div class="kicker" data-en>Education & experience</div><h2 data-mn>Мэргэжлийн замнал.</h2><h2 data-en>Professional journey.</h2></div>
+<div class="timeline"><div class="event"><h3 data-mn>Олон Улсын Улаанбаатарын Их Сургууль</h3><h3 data-en>International University of Ulaanbaatar</h3><p data-mn>Аялал жуулчлалын чиглэлийн багш · Бизнес, эдийн засгийн сургууль</p><p data-en>Tourism lecturer · School of Business and Economics</p></div><div class="event"><h3 data-mn>Магистрын зэрэг · 2023</h3><h3 data-en>Master's degree · 2023</h3><p data-mn>Аялал жуулчлалын чиглэлээр ахисан түвшний боловсрол</p><p data-en>Postgraduate education in tourism</p></div><div class="event"><h3 data-mn>Бакалаврын зэрэг · 2016</h3><h3 data-en>Bachelor's degree · 2016</h3><p data-mn>Аялал жуулчлалын менежер</p><p data-en>Tourism Management</p><p data-mn>БНСУ-д 2 жил суралцсан туршлага</p><p data-en>Two years of study experience in South Korea</p></div></div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-row"><div><div class="kicker" data-mn>Холбоо барих</div><div class="kicker" data-en>Get in touch</div><h2 data-mn>Хамтран бүтээцгээе.</h2><h2 data-en>Let's create together.</h2><p data-mn>Сургалт, судалгаа, төсөл, хамтын ажиллагааны талаар холбогдоорой.</p><p data-en>Reach out about teaching, research, projects and collaboration.</p></div><a class="btn" href="mailto:hello@example.com"><span data-mn>Имэйл илгээх ↗</span><span data-en>Send an email ↗</span></a></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Б.Түвшинбаяр. All rights reserved.</span><span>Personal Portfolio · Mongolia</span></div></footer>
+<script>
+const btn=document.getElementById('langBtn');
+btn.addEventListener('click',()=>{const en=!document.body.classList.contains('en');document.body.classList.toggle('en',en);document.documentElement.lang=en?'en':'mn';btn.textContent=en?'MN':'EN';});
+</script>
+</body></html>
